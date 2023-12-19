@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "175588769343",
+    "project_id": "bowlpro-ec076",
+    "storage_bucket": "bowlpro-ec076.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175588769343:android:491a5cb2e33523a51a428a",
+        "android_client_info": {
+          "package_name": "com.example.bowlpromobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABt4r4bdymW2Su9HwXgr4uKN9Z1p7K6sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

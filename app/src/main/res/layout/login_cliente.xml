@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backwhite"
+    tools:context="TelaLoginCliente">
+
+    <ImageView
+        android:id="@+id/iconVoltarforFirst"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:src="@drawable/iconsvoltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonEntrar"
+        android:layout_width="191dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/black"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CadastrarCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <ImageView
+        android:id="@+id/loginClienteLogo"
+        android:layout_width="389dp"
+        android:layout_height="408dp"
+        android:background="@drawable/loginclientepng"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <View
+        android:id="@+id/conteiner_Login"
+        style="@style/Fundo_conteiner_all"
+        android:layout_width="357dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bl"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/bl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <EditText
+        android:id="@+id/email_edit_login"
+        style="@style/AllTexts"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableRight="@drawable/email_icon"
+        app:layout_constraintStart_toStartOf="@id/conteiner_Login"
+        app:layout_constraintEnd_toEndOf="@id/conteiner_Login"
+        app:layout_constraintTop_toTopOf="@id/conteiner_Login"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/senha_edit_login"
+        style="@style/AllTexts"
+        android:layout_marginTop="92dp"
+        android:drawableRight="@drawable/eyes"
+        android:hint="Digite sua senha"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/conteiner_Login"
+        app:layout_constraintStart_toStartOf="@id/conteiner_Login"
+        app:layout_constraintTop_toTopOf="@id/conteiner_Login"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/CadastrarCliente"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="188dp"
+        android:minHeight="48dp"
+        android:text="Não tem uma conta cadastrada? Clique aqui."
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conteiner_Login" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

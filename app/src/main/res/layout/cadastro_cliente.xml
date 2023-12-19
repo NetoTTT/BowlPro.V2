@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".TelaCadastroCliente">
+
+    <ImageView
+        android:id="@+id/CadastroLogo"
+        android:layout_width="389dp"
+        android:layout_height="408dp"
+        android:background="@drawable/cadastrocliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <ImageView
+        android:id="@+id/iconVoltarforLogin"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:src="@drawable/iconsvoltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="191dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/black"
+        android:text="Cadastre-se"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+
+    <View
+        android:id="@+id/conteiner1"
+        style="@style/Fundo_conteiner_all"
+        android:layout_width="370dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bl1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <EditText
+        android:id="@+id/nome_edit_cadastro"
+        style="@style/AllTexts"
+        android:hint="Digite seu nome"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableRight="@drawable/pencil"
+        app:layout_constraintStart_toStartOf="@id/conteiner1"
+        app:layout_constraintEnd_toEndOf="@id/conteiner1"
+        app:layout_constraintTop_toTopOf="@id/conteiner1"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/email_edit_cadastro"
+        style="@style/AllTexts"
+        android:layout_marginTop="92dp"
+        android:drawableRight="@drawable/email_icon"
+        android:hint="Digite um e-mail válido"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner1"
+        app:layout_constraintStart_toStartOf="@id/conteiner1"
+        app:layout_constraintTop_toTopOf="@id/conteiner1"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/senha_edit_cadastro"
+        style="@style/AllTexts"
+        android:layout_marginTop="168dp"
+        android:drawableRight="@drawable/padlock_icon"
+        android:hint="Crie uma senha"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/conteiner1"
+        app:layout_constraintTop_toTopOf="@id/conteiner1"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/idade_edit_cadastro"
+        style="@style/AllTexts"
+        android:layout_marginTop="240dp"
+        android:drawableRight="@drawable/old_icon"
+        android:hint="Digite sua idade"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner1"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@id/conteiner1"
+        app:layout_constraintTop_toTopOf="@id/conteiner1"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="310dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="Quando o cadastro for concluido você será redirecionado para a tela de Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

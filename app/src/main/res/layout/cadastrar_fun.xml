@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".TelaCadastrarFun">
+
+    <ImageView
+        android:id="@+id/CadastroLogo"
+        android:layout_width="389dp"
+        android:layout_height="408dp"
+        android:background="@drawable/cadastrofunlogo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <ImageView
+        android:id="@+id/iconVoltarforLogin12"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:src="@drawable/iconsvoltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/buttonCadastrarFun1"
+        android:layout_width="191dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/black"
+        android:text="Cadastrar funcionário"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <View
+        android:id="@+id/conteiner21"
+        style="@style/Fundo_conteiner_all"
+        android:layout_width="366dp"
+        android:layout_height="379dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bl21"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bl21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292" />
+
+    <EditText
+        android:id="@+id/nome_edit_cadastroFun"
+        style="@style/AllTexts"
+        android:hint="Digite o nome do funcionário"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableRight="@drawable/pencil"
+        app:layout_constraintStart_toStartOf="@id/conteiner21"
+        app:layout_constraintEnd_toEndOf="@id/conteiner21"
+        app:layout_constraintTop_toTopOf="@id/conteiner21"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/cpf_edit_fun"
+        style="@style/AllTexts"
+        android:layout_marginTop="92dp"
+        android:drawableRight="@drawable/email_icon"
+        android:hint="Digite o CPF do funcionário"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner21"
+        app:layout_constraintStart_toStartOf="@id/conteiner21"
+        app:layout_constraintTop_toTopOf="@id/conteiner21"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/cargo_edit_fun"
+        style="@style/AllTexts"
+        android:layout_marginTop="168dp"
+        android:drawableRight="@drawable/work"
+        android:hint="Digite o cargo do funcionário"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner21"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/conteiner21"
+        app:layout_constraintTop_toTopOf="@id/conteiner21"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/idade_edit_fun"
+        style="@style/AllTexts"
+        android:layout_marginTop="240dp"
+        android:drawableRight="@drawable/old_icon"
+        android:hint="Digite a idade do funcionário"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner21"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@id/conteiner21"
+        app:layout_constraintTop_toTopOf="@id/conteiner21"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/id_fun"
+        style="@style/AllTexts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="308dp"
+        android:drawableRight="@drawable/padlock_icon"
+        android:hint="Digite um id para o funcionário"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/conteiner21"
+        app:layout_constraintStart_toStartOf="@id/conteiner21"
+        app:layout_constraintTop_toTopOf="@id/conteiner21"
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whitesemlogo"
+    tools:context=".TelaMenu_ADM">
+
+    <View
+        android:id="@+id/conteiner2"
+        style="@style/Fundo_conteiner_all"
+        android:layout_width="370dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bl2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonBuscarFun"
+        android:layout_width="252dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/blue_dark"
+        android:text="Buscar Funcionário"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/conteiner2"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintLeft_toLeftOf="@+id/conteiner2"
+        app:layout_constraintStart_toStartOf="@+id/conteiner2"
+        app:layout_constraintTop_toTopOf="@+id/conteiner2" />
+
+    <TextView
+        android:id="@+id/constant_fun"
+        android:layout_width="264dp"
+        android:layout_height="30dp"
+        android:text="N° de funcionários cadastrados:"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <TextView
+        android:id="@+id/constant_cliente"
+        android:layout_width="230dp"
+        android:layout_height="29dp"
+        android:text="N° de clientes cadastrados:"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+    <TextView
+        android:id="@+id/constant_fun_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/constant_fun"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <ImageView
+        android:id="@+id/MenuADMLogo"
+        android:layout_width="389dp"
+        android:layout_height="408dp"
+        android:background="@drawable/menuadm"
+        app:layout_constraintBottom_toTopOf="@+id/conteiner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+
+    <ImageView
+        android:id="@+id/iconVoltarforLogin4"
+        android:layout_width="73dp"
+        android:layout_height="78dp"
+        android:src="@drawable/iconsvoltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <Button
+        android:id="@+id/bl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+
+    <Button
+        android:id="@+id/buttonCadastrarFun"
+        android:layout_width="252dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/blue_dark"
+        android:text="Cadastrar Funcionário"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/conteiner2"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="@+id/conteiner2"
+        app:layout_constraintStart_toStartOf="@+id/conteiner2"
+        app:layout_constraintTop_toTopOf="@+id/conteiner2" />
+
+    <TextView
+        android:id="@+id/constant_cliente_Num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/constant_cliente"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
