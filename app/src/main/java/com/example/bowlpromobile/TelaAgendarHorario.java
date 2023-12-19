@@ -36,7 +36,7 @@ public class TelaAgendarHorario extends AppCompatActivity {
     private EditText nomeA, dataA, horaA, idA;
     private View conteiner3;
     private ImageView voltarMenuCliente;
-    String msg[] = {"Preencha todos os campos!", "Horário agendado com sucesso!","Você Não pode mais agendar Horários!"};
+    String msg[] = {"Preencha todos os campos!", "Horário agendado com sucesso!","Não é possível agendar mais horários!"};
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
