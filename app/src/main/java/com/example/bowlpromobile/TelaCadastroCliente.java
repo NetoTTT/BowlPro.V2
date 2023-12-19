@@ -35,7 +35,7 @@ public class TelaCadastroCliente extends AppCompatActivity {
     private View conteiner1_cadastro;
 
     private ImageView voltarforLogin;
-    String msg[] = {"Preencha todos os campos!", "Cliente cadastrado com sucesso!"};
+    String msg[] = {"Preencha todos os campos!", "Cliente cadastrado com sucesso!","Não foi possível concluir o cadastro.Você é menor de idade!"};
     String userID;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,58 +75,67 @@ public class TelaCadastroCliente extends AppCompatActivity {
 
     }
     public void CadastrarUser(View v){
+        String idade= idade_cadastro.getText().toString();
+        int IdadeInt = Integer.parseInt(idade);
+        if(IdadeInt >= 18) {
+            String email = email_cadastro.getText().toString();
+            String senha = senha_cadastro.getText().toString();
 
-        String email = email_cadastro.getText().toString();
-        String senha = senha_cadastro.getText().toString();
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
 
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
 
-                if(task.isSuccessful()){
+                        SalvarDadosUser();
 
-                    SalvarDadosUser();
+                        Snackbar snackbar = Snackbar.make(v, msg[1], Snackbar.LENGTH_SHORT);
+                        snackbar.setBackgroundTint(Color.WHITE);
+                        snackbar.setTextColor(Color.BLACK);
+                        snackbar.show();
 
-                    Snackbar snackbar = Snackbar.make(v, msg[1], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.WHITE);
-                    snackbar.setTextColor(Color.BLACK);
-                    snackbar.show();
+                    } else {
 
-                } else {
+                        String erro;
 
-                    String erro;
+                        try {
 
-                    try {
+                            throw task.getException();
 
-                        throw task.getException();
+                        } catch (FirebaseAuthWeakPasswordException e) {
 
-                    }catch (FirebaseAuthWeakPasswordException e){
+                            erro = "Digite uma senha com no mínimo 6 caracteres!";
 
-                        erro = "Digite uma senha com no mínimo 6 caracteres!";
+                        } catch (FirebaseAuthInvalidCredentialsException e) {
 
-                    }catch (FirebaseAuthInvalidCredentialsException e){
+                            erro = "E-mail já existe!";
 
-                        erro = "E-mail já existe!";
+                        } catch (FirebaseAuthUserCollisionException e) {
 
-                    }catch (FirebaseAuthUserCollisionException e){
+                            erro = "Essa conta já existe!";
 
-                        erro = "Essa conta já existe!";
+                        } catch (Exception e) {
 
-                    } catch (Exception e){
+                            erro = "Erro ao cadastrar usuário!";
+                        }
 
-                        erro = "Erro ao cadastrar usuário!";
+                        Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_SHORT);
+                        snackbar.setBackgroundTint(Color.WHITE);
+                        snackbar.setTextColor(Color.BLACK);
+                        snackbar.show();
+
                     }
-
-                    Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.WHITE);
-                    snackbar.setTextColor(Color.BLACK);
-                    snackbar.show();
-
                 }
-            }
-        });
+            });
+        }else{
+            Snackbar snackbar = Snackbar.make(v, msg[2], Snackbar.LENGTH_SHORT);
+            snackbar.setBackgroundTint(Color.WHITE);
+            snackbar.setTextColor(Color.BLACK);
+            snackbar.show();
+        }
 
     }
+
 
     private  void SalvarDadosUser(){
 
