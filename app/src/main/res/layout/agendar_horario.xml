@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CadastroLogo"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <View
         android:id="@+id/conteiner3"
@@ -102,8 +102,9 @@
         style="@style/AllTexts"
         android:layout_marginTop="168dp"
         android:drawableRight="@drawable/iconrelogio"
-        android:hint="Digite a hora desejada"
+        android:hint="Digite a hora desejada\n8H-11H e 13H-20H"
         android:inputType="text"
+        android:textSize="13sp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@id/conteiner3"
@@ -130,31 +131,16 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="236dp"
-        android:layout_height="28dp"
-        android:text="Horários: 8H-11H e 13H-20H"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conteiner3"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Você so pode agendar 1 horário"
+        android:text="Agendamento máximo permitido de 1 horário!"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonAgendar"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintTop_toBottomOf="@+id/conteiner3"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
