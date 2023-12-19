@@ -101,13 +101,13 @@
         app:layout_constraintVertical_bias="0.479" />
 
     <TextView
-        android:id="@+id/Caixa_text_nome_perfil"
+        android:id="@+id/Caixa_text_nome_perfil88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="@color/black"
-        android:textSize="23dp"
-        android:hint="Você não possui\nagendamentos"
+        android:textSize="25dp"
+        android:hint="Você não possui\n agendamentos"
         android:textColorHint="@color/black_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

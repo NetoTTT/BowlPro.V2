@@ -112,7 +112,7 @@ public class TelaExibirHorario extends AppCompatActivity {
 
     private void allCompExibirHorario(){
         voltarMenu2 = findViewById(R.id.iconVoltarforMenuCliente2);
-        old_Exibir = findViewById(R.id.caixa_text_old_HM);
+        old_Exibir = findViewById(R.id.Caixa_text_nome_perfil88);
         hora_Exibir = findViewById(R.id.caixa_text_hora_HM);
         bCancelarH = findViewById(R.id.cancelarHorario);
     }
