@@ -29,7 +29,7 @@ public class TelaCadastrarFun extends AppCompatActivity {
     private ImageView voltarMenuADM1;
 
     private EditText eNome,eCPF,eCargo,eIdade,eID;
-    String msg[] = {"Preencha todos os campos!", "Funcionário cadastrado com sucesso!","Não foi possível concluir o cadastro.\nNão pode cadastrar funcionário menor de idade!"};
+    String msg[] = {"Preencha todos os campos!", "Funcionário cadastrado com sucesso!","Não foi possível concluir o cadastro.\nDisponível apenas para maiores de 18 anos!"};
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastrar_fun);

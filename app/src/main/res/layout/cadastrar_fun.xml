@@ -84,7 +84,7 @@
         android:id="@+id/cpf_edit_fun"
         style="@style/AllTexts"
         android:layout_marginTop="92dp"
-        android:drawableRight="@drawable/email_icon"
+        android:drawableRight="@drawable/cpficon"
         android:hint="Digite o CPF do funcionário"
         android:inputType="numberDecimal"
         android:textColor="@color/black"
