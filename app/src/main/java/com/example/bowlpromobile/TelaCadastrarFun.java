@@ -29,7 +29,7 @@ public class TelaCadastrarFun extends AppCompatActivity {
     private ImageView voltarMenuADM1;
 
     private EditText eNome,eCPF,eCargo,eIdade,eID;
-    String msg[] = {"Preencha todos os campos!", "Funcionário cadastrado com sucesso!"};
+    String msg[] = {"Preencha todos os campos!", "Funcionário cadastrado com sucesso!","Não foi possível concluir o cadastro.\nNão pode cadastrar funcionário menor de idade!"};
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastrar_fun);
@@ -75,43 +75,49 @@ public class TelaCadastrarFun extends AppCompatActivity {
         String cargo_f = eCargo.getText().toString();
         String idade_f = eIdade.getText().toString();
         String id_f = eID.getText().toString();
+        int IdadeInt2 = Integer.parseInt(idade_f);
+        if(IdadeInt2 >= 18) {
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+            Map<String, Object> fun = new HashMap<>();
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+            fun.put("Nome", nome_f);
+            fun.put("CPF", cpf_f);
+            fun.put("Cargo", cargo_f);
+            fun.put("Idade", idade_f);
 
-        Map<String, Object> fun = new HashMap<>();
+            String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        fun.put("Nome", nome_f);
-        fun.put("CPF",cpf_f);
-        fun.put("Cargo",cargo_f);
-        fun.put("Idade",idade_f);
+            DocumentReference documentReference = db.collection("Funcionario").document(id_f);
 
-        String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            documentReference.set(fun).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
 
-        DocumentReference documentReference = db.collection("Funcionario").document(id_f);
+                            Log.d("db", "Sucesso ao salvar do dados!");
 
-        documentReference.set(fun).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
+                            Snackbar snackbar = Snackbar.make(v, msg[1], Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.WHITE);
+                            snackbar.setTextColor(Color.BLACK);
+                            snackbar.show();
+                        }
 
-                        Log.d("db", "Sucesso ao salvar do dados!");
+                    })
 
-                        Snackbar snackbar = Snackbar.make(v, msg[1], Snackbar.LENGTH_SHORT);
-                        snackbar.setBackgroundTint(Color.WHITE);
-                        snackbar.setTextColor(Color.BLACK);
-                        snackbar.show();
-                    }
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
 
-                })
+                            Log.d("db_erro", "Erro ao salvar os dados!" + e.toString());
 
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                        Log.d("db_erro", "Erro ao salvar os dados!" + e.toString());
-
-                    }
-                });
+                        }
+                    });
+        }else {
+            Snackbar snackbar = Snackbar.make(v, msg[2], Snackbar.LENGTH_SHORT);
+            snackbar.setBackgroundTint(Color.WHITE);
+            snackbar.setTextColor(Color.BLACK);
+            snackbar.show();
+        }
     }
 
 
