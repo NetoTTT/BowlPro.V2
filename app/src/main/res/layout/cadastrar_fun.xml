@@ -131,7 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="308dp"
         android:drawableRight="@drawable/padlock_icon"
-        android:hint="Digite um id para o funcionário"
+        android:hint="Digite um ID para o funcionário"
         android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
